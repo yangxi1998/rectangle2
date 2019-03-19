@@ -1,0 +1,27 @@
+{
+  "name": "rectangle2",
+  "version": "1.0.0",
+  "description": "矩形计算器",
+  "main": "rectangle.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-csslint": "^2.0.0",
+    "grunt-eslint": "^21.0.0",
+    "grunt-htmlhint": "^0.9.13",
+    "grunt-mocha": "^1.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangxi1998/rectangle2.git"
+  },
+  "author": "yangxi1998",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yangxi1998/rectangle2/issues"
+  },
+  "homepage": "https://github.com/yangxi1998/rectangle2#readme"
+}
