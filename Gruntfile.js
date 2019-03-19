@@ -32,7 +32,7 @@ module.exports = function (grunt) {
     htmlmin: {
       options: {
           collapseWhitespace: true,
-         preserveLineBreaks: false
+         preserveLineBreaks: true
                                        
       },
     files: {
@@ -42,14 +42,18 @@ module.exports = function (grunt) {
                  
            },
     cssmin: {
-                     'dist/rectangle.css': 'rectangle.css'
+      target:{
+        files:[{
+          src:['*.css'],
+          dest:'release/rectangle.css'
+        }
+      ]
                            
-             },
+    }},
     uglify: {
-               release:{
-                 files: {
-                             'dist/rectangle.js': 'rectangle.js',
-                                       'dist/calc.js': 'calc.js'
+          release:{
+            files: {
+                  'dist/rectangle.js': 'rectangle.js',
                                                  
                  }
                               
@@ -66,6 +70,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.registerTask('default', ['htmlhint', 'csslint', 'eslint']);
   grunt.registerTask('default', ['mocha']);
-  grunt.registerTask('default', ['htmlmin', 'cssmin', 'uglify']);
+  grunt.registerTask('default', ['htmlmin']);
+  grunt.registerTask('default',['cssmin']);
+  grunt.registerTask('default',['uglify:release']);
 
 };
